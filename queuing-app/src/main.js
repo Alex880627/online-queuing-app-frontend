@@ -1,11 +1,11 @@
 'use strict';
 import Vue from 'vue'
 import { store } from './store/store'
-import My from './components/My.vue'
+import My from './components/mock-store.vue'
 /* importing components, you name them here */
 import App from './App.vue'
 import Header from './Header.vue'
-import Gringos from '../src/nestedComp.vue'
+import Gringos from './components/nestedComp.vue'
 
 
 
