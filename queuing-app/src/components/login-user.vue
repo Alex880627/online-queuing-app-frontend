@@ -1,26 +1,21 @@
-/* - - - this is just a component - - - */
+
 <template>
-  <div id="tesok">
-    <h3>This is a nested component</h3>
-    <ul>
-      <li v-for="index in tesok" :key="index">{{index}}</li>
-    </ul>
+  <div id="userLogin">
+    <h3>User login page</h3>
   </div>
 </template>
 
 <script>
 export default {
-  name: "tesok",
+  name: "userLogin",
   data() {
-    return {
-      tesok: ["Ádám", "Ádi", "Dezső"]
-    };
+    return {};
   }
 };
 </script>
 
 <style lang="scss">
-#tesok {
+#userLogin {
   height: 400px;
   background: rgb(246, 230, 235);
   padding-top: 60px;
