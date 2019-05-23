@@ -27,7 +27,7 @@ export const store = new Vuex.Store({
         },
         loginProvider: (state,payload) => {
             console.log("loginProverfired")
-            state.fetched.data = payload
+            state.loginProviderData.data = payload
         },
     },
 
@@ -54,13 +54,13 @@ export const store = new Vuex.Store({
                 console.log(JSON.stringify(myJson));
             });
         },
-        fetchToLoginprovider: context => {
+        fetchToLoginprovider: (context,payload) => {
             fetch('http://localhost:4000/login-provider',{
             method:'POST',
             mode: 'cors',
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({'email':'hairdresser',
-            "password":"valami"
+            body: JSON.stringify({'email':payload.email,
+            "password":payload.password
         
         }),
         })
