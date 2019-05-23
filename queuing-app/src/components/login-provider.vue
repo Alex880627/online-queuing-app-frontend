@@ -5,6 +5,7 @@
     <form action>
       <label for="email">Email</label>
       <br>
+      <input @input="email"($event.target.value) 
       <input type="email" id="email" placeholder="your@email.com">
       <br>
       <label for="password">Password</label>

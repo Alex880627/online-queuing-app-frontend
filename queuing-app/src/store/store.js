@@ -10,8 +10,8 @@ export const store = new Vuex.Store({
         isLoggedIn:{isLoggedIn:false},
         isAdmin:{isAdmin:true},
         
-        fetched:{data:'here will be the fetched data if u press the button'}
-        
+        fetched:{data:'here will be the fetched data if u press the button'},
+        loginProviderData:{data:"loginProvider"}
     },
     getters:{
 
@@ -25,7 +25,10 @@ export const store = new Vuex.Store({
             console.log("hsidafifso")
             state.fetched.data = payload
         },
-
+        loginProvider: (state,payload) => {
+            console.log("loginProverfired")
+            state.fetched.data = payload
+        },
     },
 
 
@@ -50,6 +53,24 @@ export const store = new Vuex.Store({
                 context.commit('addToStore',myJson)
                 console.log(JSON.stringify(myJson));
             });
-        }
+        },
+        fetchToLoginprovider: context => {
+            fetch('http://localhost:4000/login-provider',{
+            method:'POST',
+            mode: 'cors',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({'email':'hairdresser',
+            "password":"valami"
+        
+        }),
+        })
+        .then(function(response) {
+        return response.json();
+    })
+    .then(function(myJson) {
+        context.commit('loginProvider',myJson)
+        console.log(JSON.stringify(myJson));
+    });
+}
     }
 })
