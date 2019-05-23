@@ -1,7 +1,7 @@
-
+/* - - - this is just a component - - - */
 <template>
-  <div id="userLogin">
-    <h3>User login page</h3>
+  <div id="providerLogin">
+    <h3>Provider login page</h3>
     <form action>
       <label for="email">Email</label>
       <br>
@@ -28,16 +28,15 @@
 
 <script>
 export default {
-  name: "userLogin",
+  name: "providerLogin",
   data() {
     return {};
   }
-  
 };
 </script>
 
 <style lang="scss">
-#userLogin {
+#providerLogin {
   height: 400px;
   background: rgb(246, 230, 235);
   padding-top: 60px;

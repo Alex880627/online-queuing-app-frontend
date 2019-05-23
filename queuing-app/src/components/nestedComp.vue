@@ -1,4 +1,4 @@
-/* - - - this is just a component - - - */
+
 <template>
   <div id="tesok">
     <h3>This is a nested component</h3>

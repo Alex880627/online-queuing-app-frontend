@@ -1,45 +1,41 @@
-/* - - - this is the root component - - - */
+
 <template>
-  <div id="root">
-    <router-view></router-view>
-    <my></my>
+  <div id="welcome">
+    <h1>{{greeting()}}</h1>
+    <button>
+      <router-link to="/userLogin">I am a user</router-link>
+    </button>
+    <button>
+      <router-link to='/providerlogin'>I am a provider</router-link>
+    </button>
   </div>
 </template>
 
-/* - - - logic comes here - - - */
 <script>
-/* registering components locally */
-/* import Gringos from '../src/nestedComp.vue' */
-
 export default {
-  /* registering components locally */
-  /* components: {
-    teso: Gringos
-  }, */
-  name: "root",
+  name: "welcome",
   data() {
     return {};
   },
   methods: {
     greeting() {
-      return "Welcome, bitch!";
+      return "Welcome to the Beauty-Board!";
     }
   }
 };
 </script>
 
-/* - - - styling - - - */
-/* gets applied to all nested components as well, unless scoped */
 <style scoped lang="scss">
-#root {
-  height: 400px; 
-  background: rgb(246,230,235);
+#welcome {
+  height: 400px;
+  background: rgb(246, 230, 235);
   padding-top: 60px;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  margin-top: 10px;
 }
 
 h1,
