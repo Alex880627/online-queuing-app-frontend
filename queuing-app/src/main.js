@@ -1,7 +1,7 @@
 'use strict';
 import Vue from 'vue'
 import { store } from './store/store'
-import My from './components/My.vue'
+import fetcherComponentDemo from './components/fetcherComponentDemo.vue'
 /* importing components, you name them here */
 import App from './App.vue'
 //import Header from './Header.vue'
@@ -12,7 +12,7 @@ import ProviderSettings from './components/ProviderSettings.vue'
 
 /* registering components globally */
 Vue.component('teso', Gringos);
-Vue.component('my',My);
+Vue.component('fetcherComponentDemo',fetcherComponentDemo);
 
 Vue.component('providerSettings', ProviderSettings)
 Vue.component('headerComponent',HeaderComponent);

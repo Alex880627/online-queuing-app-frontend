@@ -10,7 +10,7 @@ export const store = new Vuex.Store({
         isLoggedIn:{isLoggedIn:false},
         isAdmin:{isAdmin:true},
         
-        fetched:{data:'feeetcheed'}
+        fetched:{data:'here will be the fetched data if u press the button'}
         
     },
     getters:{
