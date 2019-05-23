@@ -1,46 +1,28 @@
-/* - - - this is the root component - - - */
+
 <template>
-  <div id="root">
+  <div id="header">
     <h1>Header</h1>
   </div>
 </template>
 
-/* - - - logic comes here - - - */
 <script>
-/* registering components locally */
-/* import Gringos from '../src/nestedComp.vue' */
 
-export default {
-  /* registering components locally */
-  /* components: {
-    teso: Gringos
-  }, */
-  name: "root",
-  data() {
-    return {};
-  },
-  methods: {
-    greeting() {
-      return "Welcome, bitch!";
-    }
-  }
-};
+export default {};
 </script>
 
-/* - - - styling - - - */
-/* gets applied to all nested components as well, unless scoped */
 <style scoped lang="scss">
-#root { 
+#header { 
   background: rgb(246,230,235);
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 10px;
 }
 
-h1,
+h1 {
+  margin-top:0;
+}
 h2 {
   font-weight: normal;
 }

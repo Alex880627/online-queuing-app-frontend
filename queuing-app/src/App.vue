@@ -1,9 +1,12 @@
 /* - - - this is the root component - - - */
 <template>
   <div id="root">
-    <h1>Welcom to the Beauty-Board!</h1>
+    <h1>Welcome to the Beauty-Board!</h1>
     <button>I am a user</button>
     <button>I am a provider</button>
+    
+    <router-view></router-view>
+
     <teso></teso>
   </div>
 </template>
