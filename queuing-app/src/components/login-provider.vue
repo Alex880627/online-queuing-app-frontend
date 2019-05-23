@@ -2,6 +2,27 @@
 <template>
   <div id="providerLogin">
     <h3>Provider login page</h3>
+    <form action>
+      <label for="email">Email</label>
+      <br>
+      <input type="email" id="email" placeholder="your@email.com">
+      <br>
+      <label for="password">Password</label>
+      <br>
+      <input type="password" id="password">
+      <br>
+      <button>Login</button>
+    </form>
+    <div>
+      <nav>
+        <a>
+          <router-link to="/providerRegister">Register</router-link>
+        </a><br>
+        <a>
+          <router-link to="/">Forgot my password</router-link>
+        </a>
+      </nav>
+    </div>
   </div>
 </template>
 
@@ -17,14 +38,12 @@ export default {
 <style lang="scss">
 #providerLogin {
   height: 400px;
-  background: rgb(246, 230, 235);
   padding-top: 60px;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 
 h1,

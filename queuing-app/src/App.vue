@@ -37,14 +37,13 @@ export default {
 <style scoped lang="scss">
 #root {
   height: 400px; 
-  background: rgb(246,230,235);
+  /* background: rgb(246,230,235); */
   padding-top: 60px;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 10px;
 }
 
 h1,

@@ -1,8 +1,20 @@
 
 <template>
-  <div id="userLogin">
+  <div id="userRegister">
     <h3>User login page</h3>
     <form action>
+      <label for="username">Username</label>
+      <br>
+      <input type="text" id="username">
+      <br>
+      <label for="lastname">Lastname</label>
+      <br>
+      <input type="text" id="lastname">
+      <br>
+      <label for="firstname">Firstname</label>
+      <br>
+      <input type="text" id="firstname">
+      <br>
       <label for="email">Email</label>
       <br>
       <input type="email" id="email" placeholder="your@email.com">
@@ -11,40 +23,22 @@
       <br>
       <input type="password" id="password">
       <br>
-      <button v-on:click="dosome()">
-        <router-link to="/services">Login</router-link>
-      </button>
+      <button>Register</button>
     </form>
-    <div>
-      <nav>
-        <a>
-          <router-link to="/userRegister">Register</router-link>
-        </a>
-        <br>
-        <a>
-          <router-link to="/">Forgot my password</router-link>
-        </a>
-      </nav>
-    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "userLogin",
+  name: "userRegister",
   data() {
     return {};
-  },
-  methods: {
-    dosome: function() {
-      alert("hello");
-    }
   }
 };
 </script>
 
 <style lang="scss">
-#userLogin {
+#userRegister {
   height: 400px;
   padding-top: 60px;
   font-family: "Avenir", Helvetica, Arial, sans-serif;

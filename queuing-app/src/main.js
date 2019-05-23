@@ -5,12 +5,12 @@ import fetcherComponentDemo from './components/fetcherComponentDemo.vue'
 /* importing components, you name them here */
 import App from './App.vue'
 //import Header from './Header.vue'
-import Gringos from '../src/nestedComp.vue'
+import Gringos from './components/nestedComp.vue'
 
 import HeaderComponent from './components/headerComponent.vue'
 import ProviderSettings from './components/ProviderSettings.vue'
 
-/* registering components globally */
+/* registering comp/onents globally */
 Vue.component('teso', Gringos);
 Vue.component('fetcherComponentDemo',fetcherComponentDemo);
 
@@ -35,7 +35,6 @@ const app = new Vue({
 })
 /*
 const header = new Vue({
-  
   el: '#header',
   render: h => h(Header)
 })*/
