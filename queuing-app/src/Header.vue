@@ -1,10 +1,7 @@
 /* - - - this is the root component - - - */
 <template>
   <div id="root">
-    <h1>Welcom to the Beauty-Board!</h1>
-    <button>I am a user</button>
-    <button>I am a provider</button>
-    <teso></teso>
+    <h1>Header</h1>
   </div>
 </template>
 
@@ -33,10 +30,8 @@ export default {
 /* - - - styling - - - */
 /* gets applied to all nested components as well, unless scoped */
 <style scoped lang="scss">
-#root {
-  height: 400px; 
+#root { 
   background: rgb(246,230,235);
-  padding-top: 60px;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
