@@ -2,6 +2,7 @@
 <template>
   <div id="welcome">
     <h1>{{greeting()}}</h1>
+    <h1>{{jeno}}</h1>
     <button>
       <router-link to="/userLogin">I am a user</router-link>
     </button>
@@ -15,7 +16,9 @@
 export default {
   name: "welcome",
   data() {
-    return {};
+    return {
+      jeno: 'szevasz jeno'
+    };
   },
   methods: {
     greeting() {
