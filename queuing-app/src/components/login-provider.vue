@@ -2,17 +2,25 @@
 <template>
   <div id="providerLogin">
     <h3>Provider login page</h3>
-    <form action="">
-      <label for="email">Email</label><br>
-      <input type="email" id="email" placeholder="your@email.com"><br>
-      <label for="password">Password</label><br>
-      <input type="password" id="password"><br>
+    <form action>
+      <label for="email">Email</label>
+      <br>
+      <input type="email" id="email" placeholder="your@email.com">
+      <br>
+      <label for="password">Password</label>
+      <br>
+      <input type="password" id="password">
+      <br>
       <button>Login</button>
     </form>
     <div>
       <nav>
-        <a>Register</a><br>
-        <a>Forgot my password</a>
+        <a>
+          <router-link to="/userLogin">Register</router-link>
+        </a><br>
+        <a>
+          <router-link to="/userLogin">Forgot my password</router-link>
+        </a>
       </nav>
     </div>
   </div>
