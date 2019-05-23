@@ -2,16 +2,21 @@
 <template>
   <div id="providerLogin">
     <h3>Provider login page</h3>
-    <form action="">
-      <label for="email">Email</label><br>
-      <input type="email" id="email" placeholder="your@email.com"><br>
-      <label for="password">Password</label><br>
-      <input type="password" id="password"><br>
-      <button>Login</button>
+    <form action>
+      <label for="email">Email</label>
+      <br>
+      <input v-model="email" id="email" placeholder="your@email.com" >
+      <br>
+      <label for="password">Password</label>
+      <br>
+      <input v-model="password" id="password">
+      <br>
+      <button v-on:click.prevent="post">Login</button>
     </form>
     <div>
       <nav>
-        <a>Register</a><br>
+        <a>Register</a>
+        <br>
         <a>Forgot my password</a>
       </nav>
     </div>
@@ -19,10 +24,24 @@
 </template>
 
 <script>
+console.log(this.email);
 export default {
   name: "providerLogin",
   data() {
-    return {};
+    return {
+        email: "",
+        password: ""
+    }
+  },
+  methods: {
+    post: function() {
+      this.$http.post("http://localhost:4000/login-provider", {
+        email: "kozosmarika@gmail.com",
+        password: "kiskecske"
+      }).then(function(data){
+        console.log(data);
+      });
+    }
   }
 };
 </script>

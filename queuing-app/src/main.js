@@ -6,10 +6,12 @@ import My from './components/mock-store.vue'
 import App from './App.vue'
 import Header from './Header.vue'
 import Gringos from './components/nestedComp.vue'
+import VueResource from 'vue-resource';
 
 /* registering components globally */
 Vue.component('teso', Gringos);
 Vue.component('my',My)
+Vue.use(VueResource);
 
 /* setting up routing */
 import VueRouter from 'vue-router'
