@@ -12,7 +12,7 @@
       <input type="password" id="password">
       <br>
       <button v-on:click="dosome()">
-        <router-link to="/">Login</router-link>
+        <router-link to="/services">Login</router-link>
       </button>
     </form>
     <div>
@@ -35,9 +35,9 @@ export default {
   data() {
     return {};
   },
-  methods:{
-    dosome: function(){
-      alert('hello');
+  methods: {
+    dosome: function() {
+      alert("hello");
     }
   }
 };

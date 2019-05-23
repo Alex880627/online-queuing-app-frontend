@@ -2,7 +2,7 @@
 <template>
   <div id="root">
     <router-view></router-view>
-    <my></my>
+    <fetcherComponentDemo></fetcherComponentDemo>
   </div>
 </template>
 
