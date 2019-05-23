@@ -5,15 +5,15 @@
     <form action>
       <label for="email">Email</label>
       <br>
-      <input type="email" id="email" placeholder="your@email.com">
+       <input @input="email($event.target.value)">
       <br>
       <label for="password">Password</label>
       <br>
-      <input type="password" id="password">
+      <input @input="password($event.target.value)">
       <br>
-      <button v-on:click="dosome()">
+      <button v-on:click="post">Login</button>
         <router-link to="/services">Login</router-link>
-      </button>
+      
     </form>
     <div>
       <nav>
