@@ -1,18 +1,24 @@
 
 <template>
-  <div id="header">
-    <h1>Header</h1>
+  <div id="services">
+    <h3>Available services</h3>
+   
   </div>
 </template>
 
 <script>
-
-export default {};
+export default {
+  name: "services",
+  data() {
+    return {};
+  }
+};
 </script>
 
-<style scoped lang="scss">
-#header { 
-  background: rgb(246,230,235);
+<style lang="scss">
+#services {
+  height: 400px;
+  padding-top: 60px;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -20,9 +26,7 @@ export default {};
   color: #2c3e50;
 }
 
-h1 {
-  margin-top:0;
-}
+h1,
 h2 {
   font-weight: normal;
 }
@@ -33,7 +37,6 @@ ul {
 }
 
 li {
-  display: inline;
   margin: 0 10px;
 }
 
