@@ -1,7 +1,7 @@
 
 <template>
   <div id="providerRegister">
-    <h3>Provider login page</h3>
+    <h3>Provider register page</h3>
     <form action>
       <label for="username">Username</label>
       <br>
