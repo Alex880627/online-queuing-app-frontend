@@ -11,7 +11,7 @@
       <br>
       <input type="password" id="password">
       <br>
-      <button>
+      <button v-on:click="dosome()">
         <router-link to="/">Login</router-link>
       </button>
     </form>
@@ -34,6 +34,11 @@ export default {
   name: "userLogin",
   data() {
     return {};
+  },
+  methods:{
+    dosome: function(){
+      alert('hello');
+    }
   }
 };
 </script>
@@ -41,14 +46,12 @@ export default {
 <style lang="scss">
 #userLogin {
   height: 400px;
-  background: rgb(246, 230, 235);
   padding-top: 60px;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 
 h1,

@@ -28,7 +28,6 @@ export default {
 <style scoped lang="scss">
 #welcome {
   height: 400px;
-  background: rgb(246, 230, 235);
   padding-top: 60px;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
