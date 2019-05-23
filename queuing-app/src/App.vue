@@ -2,6 +2,7 @@
 <template>
   <div id="root">
     <router-view></router-view>
+    <my></my>
   </div>
 </template>
 
