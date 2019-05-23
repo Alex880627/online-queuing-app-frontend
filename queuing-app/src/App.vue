@@ -4,6 +4,7 @@
     <h1>Welcom to the Beauty-Board!</h1>
     <button>I am a user</button>
     <button>I am a provider</button>
+    <my></my>
     <teso></teso>
   </div>
 </template>
