@@ -5,19 +5,20 @@
     <form action>
       <label for="email">Email</label>
       <br>
-      <input type="email" id="email" placeholder="your@email.com">
+      <input @input="email($event.target.value)">
       <br>
       <label for="password">Password</label>
       <br>
-      <input type="password" id="password">
+      <input @input="password($event.target.value)">
       <br>
-      <button>Login</button>
+      <button v-on:click="post">Login</button>
     </form>
     <div>
       <nav>
         <a>
           <router-link to="/providerRegister">Register</router-link>
-        </a><br>
+        </a>
+        <br>
         <a>
           <router-link to="/">Forgot my password</router-link>
         </a>
@@ -30,7 +31,34 @@
 export default {
   name: "providerLogin",
   data() {
-    return {};
+    return {
+      emailOfProvider: "",
+      passwordOfProvider: ""
+    };
+  },
+  methods: {
+    email(value) {
+      this.emailOfProvider = value;
+    },
+    password(value) {
+      this.passwordOfProvider = value;
+    },
+    post: function() {
+      this.$http
+        .post(
+          "http://localhost:4000/login-provider",
+          {
+            email: this.emailOfProvider,
+            password: this.passwordOfProvider
+          },
+          {
+            "Content-type": "application/json"
+          }
+        )
+        .then(function(data) {
+          console.log(data);
+        });
+    }
   }
 };
 </script>

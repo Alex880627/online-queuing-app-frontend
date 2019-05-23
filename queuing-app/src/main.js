@@ -6,6 +6,7 @@ import fetcherComponentDemo from './components/fetcherComponentDemo.vue'
 import App from './App.vue'
 //import Header from './Header.vue'
 import Gringos from './components/nestedComp.vue'
+//import VueResource from 'vue-resource';
 
 import HeaderComponent from './components/headerComponent.vue'
 import ProviderSettings from './components/ProviderSettings.vue'
