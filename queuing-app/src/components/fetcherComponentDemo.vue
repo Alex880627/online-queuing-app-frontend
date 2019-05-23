@@ -1,8 +1,10 @@
 <template>
    <div>
-     {{ grettings() }}
-     {{ greetingsFromStore }}
-     <button v-on:click="greetPlusName"> Hello Plus Name</button>
+      
+     {{  getFromStore }}
+     
+     <button v-on:click="fetcher()">Fetcher</button>
+     
    </div>
 </template>
 
@@ -10,27 +12,21 @@
 export default {
   name: 'fetcherComponentDemo',
   computed:{
-      greetingsFromStore() {
-          return this.$store.state.hello.hy
+     
+       getFromStore() {
+          return this.$store.state.fetched.data
       }
   }
   ,
   methods:{
-    grettings: function() {
-      return "hello woooorldzzzz"
-    },
-    /*
-    greetPlusName: function() {
-        this.$store.commit('addNameToGreeting')
-    }*/
-    greetPlusName: function() {
-        this.$store.dispatch('addNameToGreeting')
-    }
+   
+     fetcher: function() {
+        this.$store.dispatch('fetchToStore')
+     },
   }
   
 }
 </script>
 
 <style>
-
 </style>

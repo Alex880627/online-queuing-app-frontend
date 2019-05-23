@@ -1,8 +1,12 @@
 /* - - - this is the root component - - - */
 <template>
   <div id="root">
-    <router-view></router-view>
+    <headerComponent></headerComponent>
     <fetcherComponentDemo></fetcherComponentDemo>
+    <router-view></router-view>
+   
+
+    <teso></teso>
   </div>
 </template>
 
