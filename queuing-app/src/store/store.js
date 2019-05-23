@@ -5,7 +5,10 @@ Vue.use(Vuex);
 
 export const store = new Vuex.Store({
     state: {
-        hello:{ hy : "hiii"}
+        hello:{ hy : "hiii"},
+       
+        isLoggedIn:{isLoggedIn:false},
+        isAdmin:{isAdmin:true}
             
         
     },

@@ -1,11 +1,14 @@
 /* - - - this is the root component - - - */
 <template>
   <div id="root">
+    <headerComponent></headerComponent>
+    
     <h1>Welcome to the Beauty-Board!</h1>
     <button>I am a user</button>
     <button>I am a provider</button>
-    
+    <my></my>
     <router-view></router-view>
+   
 
     <teso></teso>
   </div>

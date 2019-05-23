@@ -3,6 +3,8 @@
      {{ grettings() }}
      {{ greetingsFromStore }}
      <button v-on:click="greetPlusName"> Hello Plus Name</button>
+      <button v-on:click="goAway">go away </button>
+      <router-link to='/providerlogin'> goooooooooo</router-link>
    </div>
 </template>
 
@@ -25,6 +27,10 @@ export default {
     }*/
     greetPlusName: function() {
         this.$store.dispatch('addNameToGreeting')
+    },
+
+    goAway: function() {
+      this.$router.go('/providerlogin');
     }
   }
   
