@@ -16,10 +16,10 @@
     <div>
       <nav>
         <a>
-          <router-link to="/userLogin">Register</router-link>
+          <router-link to="/providerRegister">Register</router-link>
         </a><br>
         <a>
-          <router-link to="/userLogin">Forgot my password</router-link>
+          <router-link to="/">Forgot my password</router-link>
         </a>
       </nav>
     </div>

@@ -2,13 +2,15 @@
 
 import welcome from './components/welcome.vue';
 import userLogin from './components/login-user.vue';
+import userRegister from './components/user-register.vue';
 import providerLogin from './components/login-provider.vue';
+import providerRegister from './components/provider-register.vue';
 
 export default[
   {path:'/', component: welcome},
   {path:'/userlogin', component: userLogin},
+  {path:'/userRegister', component: userRegister},
   {path:'/providerlogin', component: providerLogin},
-  {path:'/userlogin', component: userLogin},
-  {path:'/userlogin', component: userLogin},
+  {path:'/providerRegister', component: providerRegister},
  
 ]
