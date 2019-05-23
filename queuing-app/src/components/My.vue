@@ -1,9 +1,11 @@
 <template>
    <div>
-     {{ grettings() }}
+     
      {{ greetingsFromStore }}
-     <button v-on:click="greetPlusName"> Hello Plus Name</button>
-      <button v-on:click="goAway">go away </button>
+     {{  getFromStore }}
+     
+     <button v-on:click="fetcher()">Fetcher</button>
+     
       <router-link to='/providerlogin'> goooooooooo</router-link>
    </div>
 </template>
@@ -14,6 +16,9 @@ export default {
   computed:{
       greetingsFromStore() {
           return this.$store.state.hello.hy
+      } ,
+       getFromStore() {
+          return this.$store.state.fetched.data
       }
   }
   ,
@@ -21,13 +26,15 @@ export default {
     grettings: function() {
       return "hello woooorldzzzz"
     },
-    /*
-    greetPlusName: function() {
-        this.$store.commit('addNameToGreeting')
-    }*/
+   
+    
     greetPlusName: function() {
         this.$store.dispatch('addNameToGreeting')
     },
+
+     fetcher: function() {
+        this.$store.dispatch('fetchToStore')
+     },
 
     goAway: function() {
       this.$router.go('/providerlogin');

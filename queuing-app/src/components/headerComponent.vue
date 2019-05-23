@@ -5,7 +5,7 @@
      <div v-if="true === getIsLoggedIn">
        <div v-if="true === getIsAdmin">
         <router-link to='/userlogin'> LogOut</router-link>
-        <router-link to='/providerlogin'> Settings</router-link>
+        <router-link to='/providerSettings'> Settings</router-link>
         <router-link to='/providerlogin'> Profile</router-link>
         <router-link to='/providerlogin'> Back To Home</router-link>
        </div>

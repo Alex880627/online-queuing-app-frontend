@@ -8,12 +8,13 @@ import App from './App.vue'
 import Gringos from '../src/nestedComp.vue'
 
 import HeaderComponent from './components/headerComponent.vue'
-
+import ProviderSettings from './components/ProviderSettings.vue'
 
 /* registering components globally */
 Vue.component('teso', Gringos);
 Vue.component('my',My);
 
+Vue.component('providerSettings', ProviderSettings)
 Vue.component('headerComponent',HeaderComponent);
 
 /* setting up routing */
