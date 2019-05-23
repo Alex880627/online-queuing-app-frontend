@@ -2,6 +2,9 @@
 <template>
   <div id="userLogin">
     <h3>User login page</h3>
+    <form action="">
+      <input type="text">
+    </form>
   </div>
 </template>
 

@@ -2,8 +2,12 @@
 <template>
   <div id="welcome">
     <h1>{{greeting()}}</h1>
-    <button>I am a user</button>
-    <button>I am a provider</button>
+    <button>
+      <router-link to="/userLogin">I am a user</router-link>
+    </button>
+    <button>
+      <router-link to='/providerlogin'>I am a provider</router-link>
+    </button>
   </div>
 </template>
 

@@ -7,19 +7,17 @@ import App from './App.vue'
 import Header from './Header.vue'
 import Gringos from './components/nestedComp.vue'
 
-
-
 /* registering components globally */
 Vue.component('teso', Gringos);
 Vue.component('my',My)
-
 
 /* setting up routing */
 import VueRouter from 'vue-router'
 import Routes from './routes'
 Vue.use(VueRouter);
 const router = new VueRouter({
-  routes: Routes
+  routes: Routes,
+  mode: 'history'
 });
 
 const app = new Vue({
@@ -31,7 +29,6 @@ const app = new Vue({
 })
 
 const header = new Vue({
-  
   el: '#header',
   render: h => h(Header)
 })
