@@ -7,8 +7,7 @@ import App from './App.vue'
 import Header from './Header.vue'
 import Gringos from '../src/nestedComp.vue'
 
-import VueRouter from 'vue-router'
-Vue.use(VueRouter)
+
 
 /* registering components globally */
 Vue.component('teso', Gringos);
