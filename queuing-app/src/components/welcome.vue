@@ -6,7 +6,7 @@
       <router-link to="/userLogin">I am a user</router-link>
     </button>
     <button>
-      <router-link to='/providerlogin'>I am a provider</router-link>
+      <router-link to="/providerlogin">I am a provider</router-link>
     </button>
   </div>
 </template>
