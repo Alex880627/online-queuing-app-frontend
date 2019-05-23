@@ -4,7 +4,7 @@ import Vue from 'vue'
 /* importing components, you name them here */
 import App from './App.vue'
 import Header from './Header.vue'
-import Gringos from '../src/nestedComp.vue'
+import Gringos from './components/nestedComp.vue'
 
 /* registering components globally */
 Vue.component('teso', Gringos);
