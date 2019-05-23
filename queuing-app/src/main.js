@@ -1,7 +1,7 @@
 'use strict';
 import Vue from 'vue'
 import { store } from './store/store'
-import My from './components/mock-store.vue'
+import fetcherComponentDemo from './components/fetcherComponentDemo.vue'
 /* importing components, you name them here */
 import App from './App.vue'
 import Header from './Header.vue'
@@ -9,7 +9,7 @@ import Gringos from './components/nestedComp.vue'
 
 /* registering components globally */
 Vue.component('teso', Gringos);
-Vue.component('my',My)
+Vue.component('fetcherComponentDemo',fetcherComponentDemo)
 
 /* setting up routing */
 import VueRouter from 'vue-router'

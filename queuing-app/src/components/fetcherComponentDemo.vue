@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: 'my',
+  name: 'fetcherComponentDemo',
   computed:{
       greetingsFromStore() {
           return this.$store.state.hello.hy
