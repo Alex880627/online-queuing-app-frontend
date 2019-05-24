@@ -4,65 +4,65 @@
     <h3>User login page</h3>
     <form action>
       <label for="username">Username</label>
-      <br>
+        <br>
       <input type="text" id="username">
-      <br>
+        <br>
       <label for="lastname">Lastname</label>
-      <br>
+        <br>
       <input type="text" id="lastname">
-      <br>
+        <br>
       <label for="firstname">Firstname</label>
-      <br>
+        <br>
       <input type="text" id="firstname">
-      <br>
+        <br>
       <label for="email">Email</label>
-      <br>
+        <br>
       <input type="email" id="email" placeholder="your@email.com">
-      <br>
+        <br>
       <label for="password">Password</label>
-      <br>
+        <br>
       <input type="password" id="password">
-      <br>
+        <br>
       <button>Register</button>
     </form>
   </div>
 </template>
 
 <script>
-export default {
-  name: "userRegister",
-  data() {
-    return {};
-  }
-};
+  export default {
+    name: "userRegister",
+    data() {
+      return {};
+    },
+  };
 </script>
 
 <style lang="scss">
-#userRegister {
-  height: 400px;
-  padding-top: 60px;
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  #userRegister {
+    height: 400px;
+    padding-top: 60px;
+    font-family: "Avenir", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+  }
 
-h1,
-h2 {
-  font-weight: normal;
-}
+  h1,
+  h2 {
+    font-weight: normal;
+  }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
 
-li {
-  margin: 0 10px;
-}
+  li {
+    margin: 0 10px;
+  }
 
-a {
-  color: #42b983;
-}
+  a {
+    color: #42b983;
+  }
 </style>

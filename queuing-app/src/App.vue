@@ -4,22 +4,14 @@
     <headerComponent></headerComponent>
     <fetcherComponentDemo></fetcherComponentDemo>
     <router-view></router-view>
-   
-
-    <teso></teso>
   </div>
 </template>
 
 /* - - - logic comes here - - - */
 <script>
 /* registering components locally */
-/* import Gringos from '../src/nestedComp.vue' */
 
 export default {
-  /* registering components locally */
-  /* components: {
-    teso: Gringos
-  }, */
   name: "root",
   data() {
     return {};
