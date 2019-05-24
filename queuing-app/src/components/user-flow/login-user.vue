@@ -8,11 +8,11 @@
       <br>
         <input type="text" v-model="password">
       <br>
-      <button v-on:click="logUser">Login</button>  
+      <router-link to="/user-main" tag="button" @click.native="logUser">Login</router-link>
     <div>
       <nav>
         <a>
-          <router-link to="/providerRegister">Register</router-link>
+          <router-link to="/providerRegister" tag="button">Register</router-link>
         </a>
         <br>
         <a>
@@ -28,8 +28,8 @@ export default {
   name: "userLogin",
    data() {
     return {
-      email: "fsadfgda",
-      password: "saagfafd"
+      email: "kozosmarika@gmail.com",
+      password: "kiskecske"
     };},
   methods: {
     
