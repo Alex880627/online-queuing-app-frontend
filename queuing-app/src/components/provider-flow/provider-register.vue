@@ -1,8 +1,20 @@
-/* - - - this is just a component - - - */
+
 <template>
-  <div id="providerLogin">
-    <h3>Provider login page</h3>
+  <div id="providerRegister">
+    <h3>Provider register page</h3>
     <form action>
+      <label for="username">Username</label>
+      <br>
+      <input type="text" id="username">
+      <br>
+      <label for="lastname">Lastname</label>
+      <br>
+      <input type="text" id="lastname">
+      <br>
+      <label for="firstname">Firstname</label>
+      <br>
+      <input type="text" id="firstname">
+      <br>
       <label for="email">Email</label>
       <br>
       <input type="email" id="email" placeholder="your@email.com">
@@ -11,24 +23,14 @@
       <br>
       <input type="password" id="password">
       <br>
-      <button>Login</button>
+      <button>Register</button>
     </form>
-    <div>
-      <nav>
-        <a>
-          <router-link to="/userLogin">Register</router-link>
-        </a><br>
-        <a>
-          <router-link to="/userLogin">Forgot my password</router-link>
-        </a>
-      </nav>
-    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "providerLogin",
+  name: "providerRegister",
   data() {
     return {};
   }
@@ -36,16 +38,14 @@ export default {
 </script>
 
 <style lang="scss">
-#providerLogin {
+#providerRegister {
   height: 400px;
-  background: rgb(246, 230, 235);
   padding-top: 60px;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 
 h1,

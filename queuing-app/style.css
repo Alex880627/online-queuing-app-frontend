@@ -1,5 +1,13 @@
 body {
   padding: 0;
   margin: 0;
+  background-image: url("./src/assets/beauty2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#teamname {
+  position: fixed;
+  bottom: 0px;
 }
 /*# sourceMappingURL=style.css.map */

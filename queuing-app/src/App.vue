@@ -1,21 +1,17 @@
 /* - - - this is the root component - - - */
 <template>
   <div id="root">
+    <headerComponent></headerComponent>
+    <fetcherComponentDemo></fetcherComponentDemo>
     <router-view></router-view>
-    <my></my>
   </div>
 </template>
 
 /* - - - logic comes here - - - */
 <script>
 /* registering components locally */
-/* import Gringos from '../src/nestedComp.vue' */
 
 export default {
-  /* registering components locally */
-  /* components: {
-    teso: Gringos
-  }, */
   name: "root",
   data() {
     return {};
@@ -33,7 +29,7 @@ export default {
 <style scoped lang="scss">
 #root {
   height: 400px; 
-  background: rgb(246,230,235);
+  /* background: rgb(246,230,235); */
   padding-top: 60px;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
