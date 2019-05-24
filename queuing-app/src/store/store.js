@@ -12,6 +12,7 @@ export const store = new Vuex.Store({
 			appointments_user: [],
 			service_types: [],
 		},
+		loginProviderData:{data:"loginProvider"},
 	},
 	getters: {
 	},
@@ -27,6 +28,10 @@ export const store = new Vuex.Store({
 		},
 		addTypesOfServicesToStore: (state, payload) => {
 			state.databaseData.service_types = payload.types;
+		},
+		loginProvider: (state,payload) => {
+			console.log("loginProverfired")
+			state.loginProviderData.data = payload
 		},
 	},
 	actions: {
@@ -64,5 +69,23 @@ export const store = new Vuex.Store({
 					return error;
 				});
 		},
+		fetchToLoginprovider: (context,payload) => {
+			fetch('http://localhost:4000/login-provider',{
+				method:'POST',
+				mode: 'cors',
+				headers: {'Content-Type': 'application/json'},
+				body: JSON.stringify({
+					'email':payload.email,
+					"password":payload.password
+				}),
+			})
+				.then(function(response) {
+					return response.json();
+				})
+				.then(function(myJson) {
+					context.commit('loginProvider',myJson)
+					console.log(JSON.stringify(myJson));
+				});
+		}
 	}
-})
+});
