@@ -1,18 +1,26 @@
 <template>
   <div id='userAppointmentsDisplay'>
     <h3>Booked Appointments</h3>
-      <ul>
-        <li v-for="appointment in getAppointments" :key="appointment">{{ appointment }}</li>
-      </ul>
+      {{getAppointments}}
+      <tr v-for="(appointment,index) in appointments">
+        <td>{{index}}</td>
+        <th>{{appointment.serviceName}}</th>
+        <th>{{appointment.providerName}}</th>
+        <th>{{appointment.appointmentDate}}</th>
+        </tr>
   </div>
 </template>
 
 <script>
   export default {
     name: 'userAppointmentsDisplay',
+    data: {
+      appointments: []
+      
+    },
     computed: {
      getAppointments() {
-        return this.$store.state.userAppointments.data;
+        this.appointments =[ ...this.$store.state.userAppointments.data];
       },
     },
     methods: {
