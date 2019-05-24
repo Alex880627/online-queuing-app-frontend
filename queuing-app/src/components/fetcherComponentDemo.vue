@@ -2,6 +2,9 @@
   <div>
     {{ getFromStore() }}
     <!--  <button v-on:click="fetcher()">Fetcher</button> -->
+   <!--   <ul>
+      <li v-for="index in tesok" :key="index">{{index}}</li>
+    </ul> -->
     <tbody>
       <tr v-for="(service, index) in services">
         <td>{{index}}</td>
