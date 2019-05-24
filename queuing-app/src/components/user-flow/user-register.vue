@@ -1,7 +1,7 @@
 
 <template>
   <div id="userRegister">
-    <h3>Provider login page</h3>
+    <h3>Customer registration</h3>
       <br>
         <input type="text" v-model="username">
       <br>
@@ -32,9 +32,7 @@ export default {
       password: "saagfafd"
     };},
   methods: {
-    
     registerUser: function() {
-       console.log(this.email)
         this.$store.dispatch('fetchToRegisterUser',{
           username: this.username,
           lastname: this.lastname,
@@ -42,7 +40,6 @@ export default {
           email: this.email,
           password: this.password })
      },
-  
   }
 };
 </script>
