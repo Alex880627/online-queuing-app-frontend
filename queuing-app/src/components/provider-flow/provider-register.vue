@@ -27,8 +27,8 @@ export default {
   name: "providerRegister",
   data() {
     return {
-      email: "fsadfgda",
-      password: "saagfafd"
+      email: "",
+      password: ""
     };},
   methods: {
     
