@@ -4,6 +4,7 @@ import Vuex from 'vuex';
 Vue.use(Vuex);
 
 export const store = new Vuex.Store({
+
     state: {
         auth:{token:'token'},
        
@@ -15,18 +16,28 @@ export const store = new Vuex.Store({
         loginUserData:{data:"init"},
         registerUserData:{data:"in"},
         registerProviderData:{data:"in"},
-        userAppointments:{data:[]}
+        userAppointments:{data:[]},
+
+        databaseData: {
+			data: 'here will be the fetched data if u press the button',
+			appointments_user: [],
+			service_types: [],
+		},
     },
     getters:{
 
     },
 
     mutations:{
-        addNameToGreeting : state => {
-            state.hello.hy = "hiii Valami"
-        },
+        addAppointmentsOfUserToStore: (state, payload) => {
+			state.databaseData.appointments_user = payload.appointments;
+		},
+		addTypesOfServicesToStore: (state, payload) => {
+			state.databaseData.service_types = payload.types;
+		},
+       
         addToStore: (state,payload) => {
-            console.log("hsidafifso")
+           
             state.fetched.data = payload
         },
         loginProvider: (state,payload) => {
@@ -184,3 +195,4 @@ fetchToGetServices: (context,payload) => {
 },
     }
 })
+
