@@ -14,6 +14,7 @@ import providerLogin from './components/provider-flow/login-provider.vue';
 import providerSettings from './components/provider-flow/providerSettings.vue';
 import providerRegister from './components/provider-flow/provider-register.vue';
 import userMainPage from './components/user-flow/user-main.vue';
+import fetchComponent from './components/fetcherComponentDemo.vue';
 
 
 export default[
@@ -21,9 +22,9 @@ export default[
   {path:'/userlogin', component: userLogin},
   {path:'/userRegister', component: userRegister},
   {path:'/providerlogin', component: providerLogin},
-  {path:'/userlogin', component: userLogin}, 
   {path:'/providerSettings', component: providerSettings},
   {path:'/providerRegister', component: providerRegister},
   {path:'/user-main', component: userMainPage},
+  {path:'/fetchComponent', component: fetchComponent},
 
 ]

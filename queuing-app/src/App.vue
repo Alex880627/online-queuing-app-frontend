@@ -2,7 +2,7 @@
 <template>
   <div id="root">
     <headerComponent></headerComponent>
-    <fetcherComponentDemo></fetcherComponentDemo>
+    <!-- <fetcherComponentDemo></fetcherComponentDemo> -->
     <router-view></router-view>
   </div>
 </template>

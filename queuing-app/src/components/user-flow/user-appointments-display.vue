@@ -10,6 +10,9 @@
 <script>
   export default {
     name: 'userAppointmentsDisplay',
+    data:{
+      appointments:[]
+    },
     computed: {
      getAppointments() {
         return this.$store.state.userAppointments.data;
