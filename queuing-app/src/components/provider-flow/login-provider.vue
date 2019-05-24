@@ -2,12 +2,15 @@
   <div id="providerLogin">
     <h3>Provider login page</h3>
       <br>
-        <input type="text" v-model="email">
+      <label>E-mail</label><br>
+        <input type="email" v-model="email">
       <br>
       <br>
-        <input type="text" v-model="password">
+       <label>password</label><br>
+        <input type="password" v-model="password">
       <br>
       <button v-on:click="logUser">Login</button>
+      <router-link to="/providerRegister" tag="button">Registration</router-link><br>
   </div>
 </template>
 
@@ -16,8 +19,8 @@ export default {
   name: "providerLogin",
    data() {
     return {
-      email: "fsadfgda",
-      password: "saagfafd"
+      email: "",
+      password: ""
     };},
   methods: {
     
