@@ -3,19 +3,19 @@
   <div id="userRegister">
     <h3>Customer registration</h3>
       <br>
-        <input type="text" v-model="username">
+        <input type="text" v-model="username" placeholder="username">
       <br>
       <br>
-        <input type="text" v-model="lastname">
+        <input type="text" v-model="lastname" placeholder="lastname">
       <br>
       <br>
-        <input type="text" v-model="firstname">
+        <input type="text" v-model="firstname" placeholder="firstname">
       <br>
       <br>
-        <input type="text" v-model="email">
+        <input type="email" v-model="email" placeholder="email">
       <br>
       <br>
-        <input type="text" v-model="password">
+        <input type="password" v-model="password" placeholder="password">
       <br>
       
       <button v-on:click="registerUser">Register</button>
@@ -28,8 +28,8 @@ export default {
   name: "userRegister",
      data() {
     return {
-      email: "fsadfgda",
-      password: "saagfafd"
+      email: "",
+      password: ""
     };},
   methods: {
     registerUser: function() {
