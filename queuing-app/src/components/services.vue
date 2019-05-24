@@ -2,7 +2,6 @@
 <template>
   <div id="services">
     <h3>Available services</h3>
-   
   </div>
 </template>
 
@@ -24,6 +23,11 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+table {
+  margin: 10px;
+  padding: 10px;
 }
 
 h1,

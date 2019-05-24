@@ -4,9 +4,6 @@
     <headerComponent></headerComponent>
     <fetcherComponentDemo></fetcherComponentDemo>
     <router-view></router-view>
-   
-
-    <teso></teso>
   </div>
 </template>
 
