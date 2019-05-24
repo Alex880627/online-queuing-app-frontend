@@ -1,6 +1,5 @@
 <template>
    <div>
-     <h1> Heeeeey</h1>
      {{ getDeciderFromStore }}
      <div v-if="true === getIsLoggedIn">
        <div v-if="true === getIsAdmin">

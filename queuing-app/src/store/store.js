@@ -5,13 +5,8 @@ Vue.use(Vuex);
 
 export const store = new Vuex.Store({
     state: {
-        hello:{ hy : "hiii"},
-       
         isLoggedIn:{isLoggedIn:false},
-        isAdmin:{isAdmin:true},
-        
-        fetched:{data:'here will be the fetched data if u press the button'}
-        
+        isAdmin:{isAdmin:true}
     },
     getters:{
 

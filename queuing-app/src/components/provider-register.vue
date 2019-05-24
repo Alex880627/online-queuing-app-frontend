@@ -2,29 +2,32 @@
 <template>
   <div id="providerRegister">
     <h3>Provider register page</h3>
-    <form action>
-      <label for="username">Username</label>
+      <label for="companyname">Name of your company</label>
       <br>
-      <input type="text" id="username">
-      <br>
-      <label for="lastname">Lastname</label>
-      <br>
-      <input type="text" id="lastname">
-      <br>
-      <label for="firstname">Firstname</label>
-      <br>
-      <input type="text" id="firstname">
+      <input type="text" v-model="companyname">
       <br>
       <label for="email">Email</label>
       <br>
-      <input type="email" id="email" placeholder="your@email.com">
+      <input type="email" v-model="email">
       <br>
       <label for="password">Password</label>
       <br>
-      <input type="password" id="password">
+      <input type="password" v-model="password">
       <br>
+      <div id="checkbox">
+      <h2>Please choose your type of service</h2>
+      <label>Hairdresser</label>
+      <input type="checkbox" value="" v-model="services.type" />
+      <label>Dentist</label>
+      <input type="checkbox" value="" v-model="services.type" />
+      <label>Plastic</label>
+      <input type="checkbox" value="" v-model="services.type" />
+      <label>Massage terapic</label>
+      <input type="checkbox" value="" v-model="services.type" />
+    </div>
+    <div>
       <button>Register</button>
-    </form>
+      </div>
   </div>
 </template>
 
@@ -32,7 +35,11 @@
 export default {
   name: "providerRegister",
   data() {
-    return {};
+    return {
+      service:{
+        type:[],
+      }
+    };
   }
 };
 </script>

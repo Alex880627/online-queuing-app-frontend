@@ -12,7 +12,7 @@ import HeaderComponent from './components/headerComponent.vue'
 import ProviderSettings from './components/ProviderSettings.vue'
 
 /* registering comp/onents globally */
-Vue.component('teso', Gringos);
+//Vue.component('teso', Gringos);
 Vue.component('fetcherComponentDemo',fetcherComponentDemo);
 
 Vue.component('providerSettings', ProviderSettings)
@@ -22,6 +22,7 @@ Vue.component('headerComponent',HeaderComponent);
 import VueRouter from 'vue-router'
 import Routes from './routes'
 Vue.use(VueRouter);
+
 const router = new VueRouter({
   routes: Routes,
   mode: "history"
