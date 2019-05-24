@@ -7,7 +7,7 @@
         <router-link to='/providerlogin'> Profile</router-link>
         <router-link to='/providerlogin'> Back To Home</router-link>
        </div>
-      <div v-if="false === getIsAdmin">
+      <div v-if="false === getIsAdmin" class="main-header">
         <router-link to='/userlogin' @click.native="refreshPage"> Log Out</router-link>
         <router-link to='/providerlogin'> Settings</router-link>
         <router-link to='/user-main'> Back To Home</router-link>
@@ -40,5 +40,7 @@ export default {
 </script>
 
 <style>
-
+.main-header {
+  background-color: aqua;
+}
 </style>
