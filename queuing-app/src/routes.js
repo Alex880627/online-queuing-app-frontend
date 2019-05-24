@@ -1,13 +1,6 @@
 'use strict';
 
 import welcome from './components/welcome.vue';
-
-
-
-
-
-import userAppointments from './components/user-flow/user-appointments-display.vue'
-
 import userLogin from './components/user-flow/login-user.vue';
 import userRegister from './components/user-flow/user-register.vue';
 import providerLogin from './components/provider-flow/login-provider.vue';

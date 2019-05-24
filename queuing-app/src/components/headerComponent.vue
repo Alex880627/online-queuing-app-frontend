@@ -8,10 +8,9 @@
         <router-link to='/providerlogin'> Back To Home</router-link>
        </div>
       <div v-if="false === getIsAdmin">
-        <router-link to='/userlogin'> Log Out</router-link>
+        <router-link to='/userlogin' @click.native="refreshPage"> Log Out</router-link>
         <router-link to='/providerlogin'> Settings</router-link>
-        <router-link to='/providerlogin'> My Appointments</router-link>
-        <router-link to='/providerlogin'> Back To Home</router-link>
+        <router-link to='/user-main'> Back To Home</router-link>
        </div>
      </div>
    </div>
@@ -32,7 +31,10 @@ export default {
   methods:{
     getHaha: function() {
       return this.data.haha
-    }
+    },
+    refreshPage: function() {
+      window.location.reload();
+    },
   }
 }
 </script>

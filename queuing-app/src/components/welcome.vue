@@ -2,19 +2,15 @@
 <template>
   <div id="welcome">
     <h1>{{greeting()}}</h1>
-      <button>
-        <router-link to="/userLogin">I am a user</router-link>
-      </button>
-      <button v-on:click="fetchData()">
-        <router-link to="/providerlogin">I am a provider</router-link>
-      </button>
+        <router-link to="/userLogin" tag="button">I am a user</router-link>
+        <router-link to="/providerlogin" tag="button">I am a provider</router-link>
   </div>
 </template>
 
 <script>
   export default {
     name: "welcome",
-      data() {
+    data() {
         return {};
     },
     methods: {
