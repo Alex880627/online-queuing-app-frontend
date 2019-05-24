@@ -2,11 +2,13 @@
 <template>
   <div id="providerLogin">
     <h3>Customer login</h3>
-      <br>
+        <br>
+      <label>E-mail</label><br>
         <input type="text" v-model="email">
       <br>
       <br>
-        <input type="text" v-model="password">
+      <label>Password</label><br>
+        <input type="pssword" v-model="password">
       <br>
       <router-link to="/user-main" tag="button" @click.native="logUser">Login</router-link>
     <div>
@@ -54,6 +56,22 @@ export default {
   color: #2c3e50;
 }
 
+input {
+  border-radius: 3px;
+  width: 15%;
+  height: 20px;
+}
+
+button {
+
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #42b983;
+  color: white;
+}
+
+
 h1,
 h2 {
   font-weight: normal;
@@ -67,6 +85,8 @@ ul {
 li {
   margin: 0 10px;
 }
+
+
 
 a {
   color: #42b983;

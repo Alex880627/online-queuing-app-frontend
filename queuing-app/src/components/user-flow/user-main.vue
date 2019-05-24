@@ -2,6 +2,7 @@
   <div id='userMainComp'>
     <userAppointmentsDisplay></userAppointmentsDisplay>
     <userServiceDisplay></userServiceDisplay>
+     <slidebar></slidebar>
   </div>
 </template>
 
