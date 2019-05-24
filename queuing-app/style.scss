@@ -1,12 +1,13 @@
 body{
   padding: 0;
   margin: 0;
-  background-image: url('./src/assets/beauty2.jpg');
+  background-color: url('./src/assets/beauty2.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-#teamname{
+#teamname {
+  display: flex;
   position: fixed;
   bottom: 0px;
 }

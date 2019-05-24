@@ -32,6 +32,7 @@
 #welcome {
   height: 400px;
   padding-top: 60px;
+  font-size: 30px;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -57,5 +58,6 @@ li {
 
 a {
   color: #42b983;
+  width: 30px;
 }
 </style>

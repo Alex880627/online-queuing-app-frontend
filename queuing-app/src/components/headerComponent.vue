@@ -14,10 +14,6 @@
         <router-link to='/providerlogin'> Back To Home</router-link>
        </div>
      </div>
-    <div v-if="false === getIsLoggedIn">  
-        <router-link to='/userlogin'> Login</router-link>
-        <router-link to='/providerlogin'> Register</router-link>
-     </div>
    </div>
 </template>
 
