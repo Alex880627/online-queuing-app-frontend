@@ -8,6 +8,7 @@ import providerSettings from './components/providerSettings.vue';
 
 import providerRegister from './components/provider-register.vue';
 import services from './components/services.vue';
+import userAppointments from './components/user-appointments-display.vue'
 
 export default[
   {path:'/', component: welcome},
@@ -18,4 +19,5 @@ export default[
   {path:'/providerSettings', component: providerSettings},
   {path:'/providerRegister', component: providerRegister},
   {path:'/services', component: services},
+  {path:'/userAppointments', component: userAppointments},
 ]

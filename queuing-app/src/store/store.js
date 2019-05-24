@@ -5,16 +5,17 @@ Vue.use(Vuex);
 
 export const store = new Vuex.Store({
     state: {
-        hello:{ hy : "hiii"},
+        auth:{token:'token'},
        
         isLoggedIn:{isLoggedIn:false},
-        isAdmin:{isAdmin:true},
+        isAdmin:{isAdmin:false},
         
         fetched:{data:'here will be the fetched data if u press the button'},
         loginProviderData:{data:"loginProvider"},
         loginUserData:{data:"init"},
         registerUserData:{data:"in"},
-        registerProviderData:{data:"in"}
+        registerProviderData:{data:"in"},
+        userAppointments:{data:[]}
     },
     getters:{
 
@@ -32,15 +33,19 @@ export const store = new Vuex.Store({
             console.log("loginProverfired")
             if (payload.message == "Succesful login!") {
                 state.isLoggedIn.isLoggedIn = true;
-                state.isLoggedIn.isAdmin.isAdmin = true;
+                state.isAdmin.isAdmin = true;
             }
             state.loginProviderData.data = payload
         },
         loginUser: (state,payload) => {
             console.log("loginUserfired")
+            console.log(payload.token)
+            console.log(payload.appointments)
             if (payload.message == "Succesful login!") {
                 state.isLoggedIn.isLoggedIn = true;
-                state.isLoggedIn.isAdmin.isAdmin = false;
+                state.isAdmin.isAdmin = false;
+                state.auth.token = payload.token
+                state.userAppointments.data = payload.appointments;
             }
             state.loginUserData.data = payload
         },
@@ -138,6 +143,27 @@ fetchToRegisterUser: (context,payload) => {
 
 
 fetchToRegisterProvider: (context,payload) => {
+    fetch('http://localhost:4000/provider-registration',{
+    method:'POST',
+    mode: 'cors',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({'username':payload.username,'lastname':payload.lastname,
+    'firstname':payload.firstname,'email':payload.email,
+    "password":payload.password
+
+        }),
+    })
+    .then(function(response) {
+    return response.json();
+    })
+    .then(function(myJson) {
+    context.commit('registerProvider',myJson)
+    console.log(JSON.stringify(myJson));
+    });
+},
+
+
+fetchToGetServices: (context,payload) => {
     fetch('http://localhost:4000/provider-registration',{
     method:'POST',
     mode: 'cors',
