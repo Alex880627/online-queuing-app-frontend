@@ -3,19 +3,19 @@
   <div id="providerRegister">
      <h3>Provider login page</h3>
       <br>
-        <input type="text" v-model="username">
+        <input type="text" v-model="username" placeholder="enter your username">
       <br>
       <br>
-        <input type="text" v-model="lastname">
+        <input type="text" v-model="lastname" placeholder="enter your lastname">
       <br>
       <br>
-        <input type="text" v-model="firstname">
+        <input type="text" v-model="firstname" placeholder="enter your firstname">
       <br>
       <br>
-        <input type="text" v-model="email">
+        <input type="text" v-model="email" placeholder="enter your email">
       <br>
       <br>
-        <input type="text" v-model="password">
+        <input type="text" v-model="password" placeholder="enter your password">
       <br>
       
       <button v-on:click="registerUser">Register</button>
