@@ -1,29 +1,13 @@
 <template>
   <div id="providerLogin">
     <h3>Provider login page</h3>
-   
-      
       <br>
-       <input type="text" v-model="email">
+        <input type="text" v-model="email">
       <br>
-      
       <br>
-      
-      <input type="text" v-model="password">
+        <input type="text" v-model="password">
       <br>
-      <button v-on:click="logProvider">Login</button>
-  
-    <div>
-      <nav>
-        <a>
-          <router-link to="/providerRegister">Register</router-link>
-        </a>
-        <br>
-        <a>
-          <router-link to="/">Forgot my password</router-link>
-        </a>
-      </nav>
-    </div>
+      <button v-on:click="logUser">Login</button>
   </div>
 </template>
 
@@ -32,12 +16,12 @@ export default {
   name: "providerLogin",
    data() {
     return {
-      email: "fsda",
-      password: "safd"
+      email: "fsadfgda",
+      password: "saagfafd"
     };},
   methods: {
     
-    logProvider: function() {
+    logUser: function() {
        console.log(this.email)
         this.$store.dispatch('fetchToLoginprovider',{ email: this.email,
             password: this.password})
