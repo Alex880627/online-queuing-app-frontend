@@ -54,6 +54,22 @@ export default {
   color: #2c3e50;
 }
 
+input {
+  border-radius: 3px;
+  width: 15%;
+  height: 20px;
+}
+
+button {
+
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #42b983;
+  color: white;
+}
+
+
 h1,
 h2 {
   font-weight: normal;
@@ -67,6 +83,8 @@ ul {
 li {
   margin: 0 10px;
 }
+
+
 
 a {
   color: #42b983;

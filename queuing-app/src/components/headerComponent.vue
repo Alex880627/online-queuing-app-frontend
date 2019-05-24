@@ -7,15 +7,11 @@
         <router-link to='/providerlogin'> Profile</router-link>
         <router-link to='/providerlogin'> Back To Home</router-link>
        </div>
-      <div v-if="false === getIsAdmin">
+      <div v-if="false === getIsAdmin" class="main-header">
         <router-link to='/userlogin' @click.native="refreshPage"> Log Out</router-link>
         <router-link to='/providerlogin'> Settings</router-link>
         <router-link to='/user-main'> Back To Home</router-link>
        </div>
-     </div>
-    <div v-if="false === getIsLoggedIn">  
-        <router-link to='/userlogin'> Login</router-link>
-        <router-link to='/providerlogin'> Register</router-link>
      </div>
    </div>
 </template>
@@ -44,5 +40,7 @@ export default {
 </script>
 
 <style>
-
+.main-header {
+  background-color: aqua;
+}
 </style>
