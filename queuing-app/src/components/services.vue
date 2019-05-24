@@ -2,6 +2,38 @@
 <template>
   <div id="services">
     <h3>Available services</h3>
+    <table>
+      <thead>
+        <tr>
+          <p>Hairdresser</p>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Monday</th>
+          <td>Entry</td>
+        </tr>
+        <tr>
+          <th>Tuesday</th>
+          <td>Entry</td>
+        </tr>
+        <tr>
+          <th>Wednesday</th>
+          <td>Entry</td>
+        </tr>
+      </tbody>
+      <thead>
+        <tr>
+          <p>Vet</p>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Index</th>
+          <td>Entry</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </template>
 

@@ -1,36 +1,32 @@
-/* - - - this is just a component - - - */
 <template>
   <div id="providerLogin">
     <h3>Provider login page</h3>
-    <form action>
-      <label for="email">Email</label>
       <br>
-      <input type="email" id="email" placeholder="your@email.com">
+        <input type="text" v-model="email">
       <br>
-      <label for="password">Password</label>
       <br>
-      <input type="password" id="password">
+        <input type="text" v-model="password">
       <br>
-      <button>Login</button>
-    </form>
-    <div>
-      <nav>
-        <a>
-          <router-link to="/providerRegister">Register</router-link>
-        </a><br>
-        <a>
-          <router-link to="/">Forgot my password</router-link>
-        </a>
-      </nav>
-    </div>
+      <button v-on:click="logUser">Login</button>
   </div>
 </template>
 
 <script>
 export default {
   name: "providerLogin",
-  data() {
-    return {};
+   data() {
+    return {
+      email: "fsadfgda",
+      password: "saagfafd"
+    };},
+  methods: {
+    
+    logUser: function() {
+       console.log(this.email)
+        this.$store.dispatch('fetchToLoginprovider',{ email: this.email,
+            password: this.password})
+     },
+  
   }
 };
 </script>
@@ -45,21 +41,17 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
-
 h1,
 h2 {
   font-weight: normal;
 }
-
 ul {
   list-style-type: none;
   padding: 0;
 }
-
 li {
   margin: 0 10px;
 }
-
 a {
   color: #42b983;
 }
