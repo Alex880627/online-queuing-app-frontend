@@ -1,24 +1,18 @@
 
 <template>
-  <div id="userLogin">
-    <h3>User login page</h3>
-    <form action>
-      <label for="email">Email</label>
+  <div id="providerLogin">
+    <h3>Provider login page</h3>
       <br>
-       <input @input="email($event.target.value)">
+        <input type="text" v-model="email">
       <br>
-      <label for="password">Password</label>
       <br>
-      <input @input="password($event.target.value)">
+        <input type="text" v-model="password">
       <br>
-      <button v-on:click="post">Login</button>
-        <router-link to="/services">Login</router-link>
-      
-    </form>
+      <button v-on:click="logUser">Login</button>  
     <div>
       <nav>
         <a>
-          <router-link to="/userRegister">Register</router-link>
+          <router-link to="/providerRegister">Register</router-link>
         </a>
         <br>
         <a>
@@ -32,13 +26,19 @@
 <script>
 export default {
   name: "userLogin",
-  data() {
-    return {};
-  },
+   data() {
+    return {
+      email: "fsadfgda",
+      password: "saagfafd"
+    };},
   methods: {
-    dosome: function() {
-      alert("hello");
-    }
+    
+    logUser: function() {
+       console.log(this.username)
+        this.$store.dispatch('fetchToLoginUser',{ email: this.email,
+            password: this.password})
+     },
+  
   }
 };
 </script>

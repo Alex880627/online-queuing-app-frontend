@@ -10,13 +10,8 @@
 /* - - - logic comes here - - - */
 <script>
 /* registering components locally */
-/* import Gringos from '../src/nestedComp.vue' */
 
 export default {
-  /* registering components locally */
-  /* components: {
-    teso: Gringos
-  }, */
   name: "root",
   data() {
     return {};
