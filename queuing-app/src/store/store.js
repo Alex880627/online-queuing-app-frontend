@@ -30,10 +30,18 @@ export const store = new Vuex.Store({
         },
         loginProvider: (state,payload) => {
             console.log("loginProverfired")
+            if (payload.message == "Succesful login!") {
+                state.isLoggedIn.isLoggedIn = true;
+                state.isLoggedIn.isAdmin.isAdmin = true;
+            }
             state.loginProviderData.data = payload
         },
         loginUser: (state,payload) => {
             console.log("loginUserfired")
+            if (payload.message == "Succesful login!") {
+                state.isLoggedIn.isLoggedIn = true;
+                state.isLoggedIn.isAdmin.isAdmin = false;
+            }
             state.loginUserData.data = payload
         },
         registerUser: (state,payload) => {
