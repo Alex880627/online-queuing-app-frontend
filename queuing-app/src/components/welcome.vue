@@ -2,27 +2,30 @@
 <template>
   <div id="welcome">
     <h1>{{greeting()}}</h1>
-    <button>
-      <router-link to="/userLogin">I am a user</router-link>
-    </button>
-    <button>
-      <router-link to="/providerlogin">I am a provider</router-link>
-    </button>
+      <button>
+        <router-link to="/userLogin">I am a user</router-link>
+      </button>
+      <button v-on:click="fetchData()">
+        <router-link to="/providerlogin">I am a provider</router-link>
+      </button>
   </div>
 </template>
 
 <script>
-export default {
-  name: "welcome",
-  data() {
-    return {};
-  },
-  methods: {
-    greeting() {
-      return "Welcome to the Beauty-Board!";
-    }
-  }
-};
+  export default {
+    name: "welcome",
+      data() {
+        return {};
+    },
+    methods: {
+      greeting() {
+        return "Welcome to the Beauty-Board!";
+      },
+      fetchData() {
+        this.$store.dispatch('fetchCustomDataToStore', "/login-user", {'email': 'kozosmarika@gmail.com', 'password': 'kiskecske'}) //  last parameter is mocked, should be coming from input
+      },
+    },
+  };
 </script>
 
 <style scoped lang="scss">

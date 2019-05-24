@@ -4,52 +4,65 @@ import Vuex from 'vuex';
 Vue.use(Vuex);
 
 export const store = new Vuex.Store({
-    state: {
-        hello:{ hy : "hiii"},
-       
-        isLoggedIn:{isLoggedIn:false},
-        isAdmin:{isAdmin:true},
-        
-        fetched:{data:'here will be the fetched data if u press the button'}
-        
-    },
-    getters:{
-
-    },
-
-    mutations:{
-        addNameToGreeting : state => {
-            state.hello.hy = "hiii Valami"
-        },
-        addToStore: (state,payload) => {
-            console.log("hsidafifso")
-            state.fetched.data = payload
-        },
-
-    },
-
-
-    actions:{
-        addNameToGreeting: context => {
-            setTimeout(function(){
-                context.commit('addNameToGreeting')
-            } , 2000)
-        } ,
-
-        fetchToStore: context => {
-                    fetch('http://localhost:4000/selected-type',{
-                    method:'POST',
-                    mode: 'cors',
-                    headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify({'type':'hairdresser'}),
-                })
-                .then(function(response) {
-                return response.json();
-            })
-            .then(function(myJson) {
-                context.commit('addToStore',myJson)
-                console.log(JSON.stringify(myJson));
-            });
-        }
-    }
+	state: {
+		isLoggedIn: { isLoggedIn: false },
+		isAdmin: { isAdmin: true },
+		databaseData: {
+			data: 'here will be the fetched data if u press the button',
+			appointments_user: [],
+			service_types: [],
+		},
+	},
+	getters: {
+	},
+	mutations: {
+		addToStore: (state, payload) => {	//	learning purpose
+			state.databaseData.data = payload;
+		},
+		changeLoginState: state => {
+			state.isLoggedIn = true;
+		},
+		addAppointmentsOfUserToStore: (state, payload) => {
+			state.databaseData.appointments_user = payload.appointments;
+		},
+		addTypesOfServicesToStore: (state, payload) => {
+			state.databaseData.service_types = payload.types;
+		},
+	},
+	actions: {
+		fetchToStore: context => {	//	learning purpose
+			fetch('http://localhost:4000/selected-type', {
+				method: 'POST',
+				mode: 'cors',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({ 'type': 'hairdresser' }),
+			})
+				.then(function (response) {
+					return response.json();
+				})
+				.then(function (myJson) {
+					context.commit('addToStore', myJson)
+					console.log(JSON.stringify(myJson));
+				});
+		},
+		fetchCustomDataToStore: (context, endPoint, bodyData) => {
+			fetch(`http://localhost:4000${endPoint}`, {
+				method: 'POST',
+				mode: 'cors',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify(bodyData),
+			})
+				.then(function (response) {
+					return response.json();
+				})
+				.then(function (jsonData) {
+					context.commit('addAppointmentsOfUserToStore', jsonData);
+				})
+				.catch(function (error) {
+					return error;
+				});
+		},
+	}
 })
