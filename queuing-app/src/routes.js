@@ -7,10 +7,11 @@ import providerLogin from './components/provider-flow/login-provider.vue';
 import providerSettings from './components/provider-flow/providerSettings.vue';
 import providerRegister from './components/provider-flow/provider-register.vue';
 import userMainPage from './components/user-flow/user-main.vue';
+import userAppointments from './components/user-flow/user-appointments-display.vue'
 
 
 export default[
-  {path:'/', component: welcome},
+  {path:'/', component:welcome},
   {path:'/userlogin', component: userLogin},
   {path:'/userRegister', component: userRegister},
   {path:'/providerlogin', component: providerLogin},
