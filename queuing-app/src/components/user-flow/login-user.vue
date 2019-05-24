@@ -1,12 +1,14 @@
 
 <template>
-  <div id="providerLogin">
-    <h3>Provider login page</h3>
+  <div id="userLogin">
+    <h3>Costumer login page</h3>
       <br>
+      <label>E-mail</label><br>
         <input type="text" v-model="email">
       <br>
       <br>
-        <input type="text" v-model="password">
+      <label>Password</label><br>
+        <input type="pssword" v-model="password">
       <br>
       <router-link to="/user-main" tag="button" @click.native="logUser">Login</router-link>
     <div>

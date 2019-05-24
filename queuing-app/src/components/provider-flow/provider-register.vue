@@ -3,19 +3,24 @@
   <div id="providerRegister">
      <h3>Provider login page</h3>
       <br>
+      <label>Username</label><br>
         <input type="text" v-model="username">
       <br>
       <br>
+      <label>Lastname</label><br>
         <input type="text" v-model="lastname">
       <br>
       <br>
+      <label>Firstname</label><br>
         <input type="text" v-model="firstname">
       <br>
       <br>
-        <input type="text" v-model="email">
+      <label>Email</label><br>
+        <input type="email" v-model="email">
       <br>
       <br>
-        <input type="text" v-model="password">
+      <label>Password</label><br>
+        <input type="password" v-model="password">
       <br>
       
       <button v-on:click="registerUser">Register</button>
@@ -27,8 +32,8 @@ export default {
   name: "providerRegister",
   data() {
     return {
-      email: "fsadfgda",
-      password: "saagfafd"
+      email: "",
+      password: ""
     };},
   methods: {
     

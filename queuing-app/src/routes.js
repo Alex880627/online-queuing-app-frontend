@@ -6,7 +6,6 @@ import userRegister from './components/user-flow/user-register.vue';
 import providerLogin from './components/provider-flow/login-provider.vue';
 import providerSettings from './components/provider-flow/providerSettings.vue';
 import providerRegister from './components/provider-flow/provider-register.vue';
-import slidebar from './components/slidebarComponent';
 import userMainPage from './components/user-flow/user-main.vue';
 import userAppointments from './components/user-flow/user-appointments-display.vue'
 
