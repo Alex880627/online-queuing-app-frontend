@@ -2,7 +2,7 @@
   <div id='userServiceDisplay'>
     <h3>Available services</h3>
       <ul>
-        <li v-for="serviceType in getServiceTypes" :key="serviceType">{{ serviceType }}</li>
+        <button v-for="serviceType in getServiceTypes" :key="serviceType">{{ serviceType }}</button>
       </ul>
   </div>
 </template>
@@ -12,7 +12,7 @@
     name: 'userServiceDisplay',
     computed: {
       getServiceTypes() {
-        return this.$store.state.databaseData.service_types;
+        return this.$store.state.availableServices.data;
       },
     },
   };
