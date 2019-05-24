@@ -1,18 +1,18 @@
-/* - - - this is just a component - - - */
 <template>
   <div id="providerLogin">
     <h3>Provider login page</h3>
-    <form action>
-      <label for="email">Email</label>
+   
+      
       <br>
-      <input @input="email($event.target.value)">
+       <input type="text" v-model="email">
       <br>
-      <label for="password">Password</label>
+      
       <br>
-      <input @input="password($event.target.value)">
+      
+      <input type="text" v-model="password">
       <br>
-      <button v-on:click="post">Login</button>
-    </form>
+      <button v-on:click="logProvider">Login</button>
+  
     <div>
       <nav>
         <a>
@@ -30,35 +30,19 @@
 <script>
 export default {
   name: "providerLogin",
-  data() {
+   data() {
     return {
-      emailOfProvider: "",
-      passwordOfProvider: ""
-    };
-  },
+      email: "fsda",
+      password: "safd"
+    };},
   methods: {
-    email(value) {
-      this.emailOfProvider = value;
-    },
-    password(value) {
-      this.passwordOfProvider = value;
-    },
-    post: function() {
-      this.$http
-        .post(
-          "http://localhost:4000/login-provider",
-          {
-            email: this.emailOfProvider,
-            password: this.passwordOfProvider
-          },
-          {
-            "Content-type": "application/json"
-          }
-        )
-        .then(function(data) {
-          console.log(data);
-        });
-    }
+    
+    logProvider: function() {
+       console.log(this.email)
+        this.$store.dispatch('fetchToLoginprovider',{ email: this.email,
+            password: this.password})
+     },
+  
   }
 };
 </script>
@@ -73,21 +57,17 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
-
 h1,
 h2 {
   font-weight: normal;
 }
-
 ul {
   list-style-type: none;
   padding: 0;
 }
-
 li {
   margin: 0 10px;
 }
-
 a {
   color: #42b983;
 }
