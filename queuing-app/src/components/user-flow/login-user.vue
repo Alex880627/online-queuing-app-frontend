@@ -8,7 +8,7 @@
       <br>
       <br>
       <label>Password</label><br>
-        <input type="pssword" v-model="password">
+        <input type="password" v-model="password">
       <br>
       <router-link to="/user-main" tag="button" @click.native="logUser">Login</router-link>
     <div>

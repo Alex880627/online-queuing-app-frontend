@@ -1,10 +1,10 @@
 <template>
   <div id="slidebar">
-    <label>What kind of service do you search?</label><br>
+    <label>What kind of service are zou interested in?</label><br>
     <select v-model="service.type">
      <option v-for="type in types">{{type}}</option>
     </select>
-    <p>Selected service type : {{service.type}}</p>
+    <p>Zour service of choice : {{service.type}}</p>
   </div>
 </template>
 
@@ -16,7 +16,7 @@ export default {
           service:{
             type:""
           },
-            types:["dentist","hairdresser","massage terapic", "plastic"]
+            types:["hair coloring","head massage","just cut", "mohawk"]
         }
     }
 }
