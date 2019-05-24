@@ -39,8 +39,19 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .main-header {
-  background-color: aqua;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+  border: 1px solid black;
+  background-color: rgba(255, 255, 255, 0.4);
+  a {
+     font-size:24px;
+     text-decoration: none;
+     font-weight: bold;
+     color: rgb(49, 63, 57);
+  }
 }
 </style>
