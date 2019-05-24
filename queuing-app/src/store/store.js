@@ -12,7 +12,8 @@ export const store = new Vuex.Store({
         
         fetched:{data:'here will be the fetched data if u press the button'},
         loginProviderData:{data:"loginProvider"},
-        loginUserData:{data:"init"}
+        loginUserData:{data:"init"},
+        registerUserData:{data:"in"}
     },
     getters:{
 
@@ -32,6 +33,10 @@ export const store = new Vuex.Store({
         },
         loginUser: (state,payload) => {
             console.log("loginUserfired")
+            state.loginUserData.data = payload
+        },
+        registerUser: (state,payload) => {
+            console.log("registerUserISFired")
             state.loginUserData.data = payload
         },
     },
@@ -94,6 +99,26 @@ fetchToLoginUser: (context,payload) => {
     })
     .then(function(myJson) {
     context.commit('loginUser',myJson)
+    console.log(JSON.stringify(myJson));
+    });
+},
+
+fetchToRegisterUser: (context,payload) => {
+    fetch('http://localhost:4000/user-registration',{
+    method:'POST',
+    mode: 'cors',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({'username':payload.username,'lastname':payload.lastname,
+    'firstname':payload.firstname,'email':payload.email,
+    "password":payload.password
+
+        }),
+    })
+    .then(function(response) {
+    return response.json();
+    })
+    .then(function(myJson) {
+    context.commit('registerUser',myJson)
     console.log(JSON.stringify(myJson));
     });
 },

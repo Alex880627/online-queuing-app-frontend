@@ -1,38 +1,48 @@
 
 <template>
   <div id="userRegister">
-    <h3>User login page</h3>
-    <form action>
-      <label for="username">Username</label>
+    <h3>Provider login page</h3>
       <br>
-      <input type="text" id="username">
+        <input type="text" v-model="username">
       <br>
-      <label for="lastname">Lastname</label>
       <br>
-      <input type="text" id="lastname">
+        <input type="text" v-model="lastname">
       <br>
-      <label for="firstname">Firstname</label>
       <br>
-      <input type="text" id="firstname">
+        <input type="text" v-model="firstname">
       <br>
-      <label for="email">Email</label>
       <br>
-      <input type="email" id="email" placeholder="your@email.com">
+        <input type="text" v-model="email">
       <br>
-      <label for="password">Password</label>
       <br>
-      <input type="password" id="password">
+        <input type="text" v-model="password">
       <br>
-      <button>Register</button>
-    </form>
+      
+      <button v-on:click="registerUser">Register</button>
   </div>
+
 </template>
 
 <script>
 export default {
   name: "userRegister",
-  data() {
-    return {};
+     data() {
+    return {
+      email: "fsadfgda",
+      password: "saagfafd"
+    };},
+  methods: {
+    
+    registerUser: function() {
+       console.log(this.email)
+        this.$store.dispatch('fetchToRegisterUser',{
+          username: this.username,
+          lastname: this.lastname,
+          firstname:  this.firstname,
+          email: this.email,
+          password: this.password })
+     },
+  
   }
 };
 </script>
