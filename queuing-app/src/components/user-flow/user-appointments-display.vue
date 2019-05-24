@@ -11,10 +11,12 @@
   export default {
     name: 'userAppointmentsDisplay',
     computed: {
-      getAppointments() {
-        return this.$store.state.databaseData.appointments_user;
+     getAppointments() {
+        return this.$store.state.userAppointments.data;
       },
     },
-    methods: {},
+    methods: {
+      
+    },
   };
 </script>

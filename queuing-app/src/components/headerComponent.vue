@@ -1,7 +1,5 @@
 <template>
-   <div>
-     <h1> Heeeeey</h1>
-     {{ getDeciderFromStore }}
+   <div> 
      <div v-if="true === getIsLoggedIn">
        <div v-if="true === getIsAdmin">
         <router-link to='/userlogin'> LogOut</router-link>
