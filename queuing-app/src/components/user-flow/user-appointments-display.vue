@@ -8,12 +8,14 @@
         <th>Service</th>
         <th>Provider</th>
         <th>Date</th>
+        <th>Hour</th>
         </tr>
       <tr v-for="(appointment,index) in appointments">
         <td>{{index+1}}</td>
         <td>{{appointment.serviceName}}</td>
         <td>{{appointment.providerName}}</td>
-        <td>{{appointment.appointmentDate}}</td>
+        <td>{{appointment.appointmentDate.slice(0,10)}}</td>
+        <td>{{appointment.appointmentDate.slice(11,16)}}</td>
         </tr>
         </table>
   </div>
