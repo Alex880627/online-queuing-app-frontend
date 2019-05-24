@@ -14,7 +14,6 @@ export default[
   {path:'/userlogin', component: userLogin},
   {path:'/userRegister', component: userRegister},
   {path:'/providerlogin', component: providerLogin},
-  {path:'/userlogin', component: userLogin}, 
   {path:'/providerSettings', component: providerSettings},
   {path:'/providerRegister', component: providerRegister},
   {path:'/user-main', component: userMainPage},

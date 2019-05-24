@@ -6,13 +6,9 @@
 </template>
 
 <script>
-  export default {  //  maybe data() needs to be implemented and the store filled into it
+  export default {
     name: 'userMainComp',
     computed: {},
-    methods: {
-      /* fetchData() {
-        this.$store.dispatch('fetchCustomDataToStore', "/login-user", bodyData)   last parameter is mocked, should be coming from input
-      }, */
-    },
+    methods: {},
   };
 </script>

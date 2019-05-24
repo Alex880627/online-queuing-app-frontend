@@ -1,7 +1,7 @@
 
 <template>
   <div id="providerLogin">
-    <h3>Provider login page</h3>
+    <h3>Customer login</h3>
       <br>
         <input type="text" v-model="email">
       <br>
@@ -12,7 +12,7 @@
     <div>
       <nav>
         <a>
-          <router-link to="/providerRegister" tag="button">Register</router-link>
+          <router-link to="/userRegister" tag="button">Register</router-link>
         </a>
         <br>
         <a>

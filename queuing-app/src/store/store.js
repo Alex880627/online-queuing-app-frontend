@@ -16,7 +16,8 @@ export const store = new Vuex.Store({
         loginUserData:{data:"init"},
         registerUserData:{data:"in"},
         registerProviderData:{data:"in"},
-        userAppointments:{data:[]},
+				userAppointments:{data:[]},
+				availableServices:{data:[]},
 
         databaseData: {
 			data: 'here will be the fetched data if u press the button',
@@ -41,7 +42,6 @@ export const store = new Vuex.Store({
             state.fetched.data = payload
         },
         loginProvider: (state,payload) => {
-            console.log("loginProverfired")
             if (payload.message == "Succesful login!") {
                 state.isLoggedIn.isLoggedIn = true;
                 state.isAdmin.isAdmin = true;
@@ -49,23 +49,19 @@ export const store = new Vuex.Store({
             state.loginProviderData.data = payload
         },
         loginUser: (state,payload) => {
-            console.log("loginUserfired")
-            console.log(payload.token)
-            console.log(payload.appointments)
             if (payload.message == "Succesful login!") {
                 state.isLoggedIn.isLoggedIn = true;
                 state.isAdmin.isAdmin = false;
-                state.auth.token = payload.token
-                state.userAppointments.data = payload.appointments;
+                state.auth.token = payload.token;
+								state.userAppointments.data = payload.appointments;
+								state.availableServices.data = [payload.types.toUpperCase(), "DENTIST"];
             }
             state.loginUserData.data = payload
         },
         registerUser: (state,payload) => {
-            console.log("registerUserISFired")
             state.registerUserData.data = payload
         },
         registerProvider: (state,payload) => {
-            console.log("registerPRoviderISFIred")
             state.registerProviderData.data = payload
         },
     },
@@ -89,8 +85,7 @@ export const store = new Vuex.Store({
                 return response.json();
             })
             .then(function(myJson) {
-                context.commit('addToStore',myJson)
-                console.log(JSON.stringify(myJson));
+                context.commit('addToStore',myJson);
             });
         },
         fetchToLoginprovider: (context,payload) => {
@@ -107,8 +102,7 @@ export const store = new Vuex.Store({
         return response.json();
     })
     .then(function(myJson) {
-        context.commit('loginProvider',myJson)
-        console.log(JSON.stringify(myJson));
+        context.commit('loginProvider',myJson);
     });
 },
 
@@ -127,8 +121,7 @@ fetchToLoginUser: (context,payload) => {
     return response.json();
     })
     .then(function(myJson) {
-    context.commit('loginUser',myJson)
-    console.log(JSON.stringify(myJson));
+    context.commit('loginUser',myJson);
     });
 },
 
@@ -147,8 +140,7 @@ fetchToRegisterUser: (context,payload) => {
     return response.json();
     })
     .then(function(myJson) {
-    context.commit('registerUser',myJson)
-    console.log(JSON.stringify(myJson));
+    context.commit('registerUser',myJson);
     });
 },
 
@@ -168,8 +160,7 @@ fetchToRegisterProvider: (context,payload) => {
     return response.json();
     })
     .then(function(myJson) {
-    context.commit('registerProvider',myJson)
-    console.log(JSON.stringify(myJson));
+    context.commit('registerProvider',myJson);
     });
 },
 
@@ -189,8 +180,7 @@ fetchToGetServices: (context,payload) => {
     return response.json();
     })
     .then(function(myJson) {
-    context.commit('registerProvider',myJson)
-    console.log(JSON.stringify(myJson));
+    context.commit('registerProvider',myJson);
     });
 },
     }

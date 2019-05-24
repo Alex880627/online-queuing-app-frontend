@@ -1,7 +1,7 @@
 
 <template>
   <div id="providerRegister">
-     <h3>Provider login page</h3>
+     <h3>Provider registration</h3>
       <br>
         <input type="text" v-model="username">
       <br>
@@ -34,7 +34,7 @@ export default {
     
     registerUser: function() {
        console.log(this.email)
-        this.$store.dispatch('fetchToRegisterUser',{
+        this.$store.dispatch('fetchToRegisterProvider',{
           username: this.username,
           lastname: this.lastname,
           firstname:  this.firstname,

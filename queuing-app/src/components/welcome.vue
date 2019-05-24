@@ -2,7 +2,7 @@
 <template>
   <div id="welcome">
     <h1>{{greeting()}}</h1>
-        <router-link to="/userLogin" tag="button">I am a user</router-link>
+        <router-link to="/userLogin" tag="button">I am a customer</router-link>
         <router-link to="/providerlogin" tag="button">I am a provider</router-link>
   </div>
 </template>
@@ -18,7 +18,7 @@
         return "Welcome to the Beauty-Board!";
       },
       fetchData() {
-        this.$store.dispatch('fetchCustomDataToStore', "/login-user", {'email': 'kozosmarika@gmail.com', 'password': 'kiskecske'}) //  last parameter is mocked, should be coming from input
+        this.$store.dispatch('fetchCustomDataToStore', "/login-user", {'email': 'kozosmarika@gmail.com', 'password': 'kiskecske'})
       },
     },
   };

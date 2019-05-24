@@ -1,7 +1,7 @@
 
 <template>
   <div id="userRegister">
-    <h3>Provider login page</h3>
+    <h3>Customer registration</h3>
       <br>
         <input type="text" v-model="username">
       <br>
