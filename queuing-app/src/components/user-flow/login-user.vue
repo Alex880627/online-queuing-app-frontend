@@ -34,61 +34,61 @@ export default {
       password: "kiskecske"
     };},
   methods: {
-    
     logUser: function() {
-       console.log(this.username)
-        this.$store.dispatch('fetchToLoginUser',{ email: this.email,
-            password: this.password})
+      this.$store.dispatch('fetchToLoginUser', 
+      {
+        email: this.email,
+        password: this.password
+      })
      },
-  
   }
 };
 </script>
 
 <style lang="scss">
-#userLogin {
-  height: 400px;
-  padding-top: 60px;
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  #userLogin {
+    height: 400px;
+    padding-top: 60px;
+    font-family: "Avenir", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+  }
 
-input {
-  border-radius: 3px;
-  width: 15%;
-  height: 20px;
-}
+  input {
+    border-radius: 3px;
+    width: 15%;
+    height: 20px;
+  }
 
-button {
+  button {
 
-  width: 120px;
-  height: 40px;
-  border-radius: 5px;
-  background-color: #42b983;
-  color: white;
-}
-
-
-h1,
-h2 {
-  font-weight: normal;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  margin: 0 10px;
-}
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #42b983;
+    color: white;
+  }
 
 
+  h1,
+  h2 {
+    font-weight: normal;
+  }
 
-a {
-  color: #42b983;
-}
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    margin: 0 10px;
+  }
+
+
+
+  a {
+    color: #42b983;
+  }
 </style>
