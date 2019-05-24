@@ -55,6 +55,7 @@ li {
 button {
   width: 120px;
   height: 40px;
+  margin-top: 10px;
   border-radius: 5px;
   background-color: #42b983;
   color: white;
